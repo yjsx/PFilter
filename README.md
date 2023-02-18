@@ -38,7 +38,7 @@ accuracy by 9.4% than FLOAM.
     + "topic" is the ros topic of LIDAR points.
 
 + Some notes:
-  + The parameters "*k_new*", "*theta_p*" and "*theta_max*" can control how hard  **PFilter** works, which means how many noise points removed will be removed from the map. 
+  + The parameters "*k_new*", "*theta_p*" and "*theta_max*" can control how hard  **PFilter** works, which means how many noise points will be removed from the map. 
   + *k_new* $\downarrow$, *theta_p* $\uparrow$, *theta_max* $\uparrow$ means more points are removed. 
   + Generally speaking, if the robot is moving slow, I usually let **PFilter** remove more points to keep the map tiny. For example, I use a low-speed unmanned vehicle on campus, equipped with a 32-lines LiDAR for mapping, and the parameters I use are "0, 1, 200". In comparison, the parameters used on KITTI dataset are "0, 0.4, 75".
   + To get the performance of origin FLOAM, you can set the parameters to "0,0,0". 
