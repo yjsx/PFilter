@@ -25,6 +25,7 @@
     <param name="k_new" type="string" value="0"/>
     <param name="theta_p" type="string" value="0.4"/>
     <param name="theta_max" type="string" value="75"/>
+    <param name="map_resolution" type="double" value="0.4"/>
 
     <!--- -->
     <node pkg="pfilter" type="PFilter_odom_estimation_node" name="PFilter_odom_estimation_node" output="screen"/>
