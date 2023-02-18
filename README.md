@@ -30,13 +30,18 @@ accuracy by 9.4% than FLOAM.
 + To test on KITTI dataset and get the same ATEs as the shown in the Sec. 4:
   + ```roslaunch pfilter pfilter_kitti.launch bag_filename:=/YOUR/BAG/PATH``` 
 + To test on other data:
-  + ```roslaunch pfilter pfilter.launch bag_filename:=/YOUR/BAG/PATH k_new:=xx theta_p:=xx theta_max:=xx```
+  + ```roslaunch pfilter pfilter.launch bag_filename:=/YOUR/BAG/PATH k_new:=xx theta_p:=xx theta_max:=xx topic:=xx```
+  + The xx should be replaced with suitable value. 
+    + "*k_new* " is Int $\in [0,\infty)$, but [0,5] are recommanded. 
+    + "*theta_p* " is Float $\in [0,\infty)$, but [0,3] are recommanded.
+    + "*theta_max* " is Int $\in [0,255]$.
+    + "topic" is the ros topic of LIDAR points.
 
 + Some notes:
   + The parameters "*k_new*", "*theta_p*" and "*theta_max*" can control how hard  **PFilter** works, which means how many noise points removed will be removed from the map. 
   + *k_new* $\downarrow$, *theta_p* $\uparrow$, *theta_max* $\uparrow$ means more points are removed. 
   + Generally speaking, if the robot is moving slow, I usually let **PFilter** remove more points to keep the map tiny. For example, I use a low-speed unmanned vehicle on campus, equipped with a 32-lines LiDAR for mapping, and the parameters I use are "0, 1, 200". In comparison, the parameters used on KITTI dataset are "0, 0.4, 75".
-
+  + To get the performance of origin FLOAM, you can set the parameters to "0,0,0". 
 
 ## 4. Evluation
 | KITTI sequence             | FLOAM                      | PFilter                  |KITTI sequence             | FLOAM                      | PFilter   |
@@ -52,11 +57,11 @@ accuracy by 9.4% than FLOAM.
 
 
 
-## 7.Acknowledgements
+## 5.Acknowledgements
 Thanks for [A-LOAM](https://github.com/HKUST-Aerial-Robotics/A-LOAM) and [F-LOAM](https://github.com/wh200720041/floam).
 
 
-## 8. Citation
+## 6. Citation
 If you use this work for your research, you may want to cite
 ```
 @inproceedings{duan2022pfilter,
