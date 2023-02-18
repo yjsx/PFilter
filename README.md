@@ -44,8 +44,8 @@ accuracy by 9.4% than FLOAM.
   + To get the performance of origin FLOAM, you can set the parameters to "0,0,0". 
 
 ## 4. Evluation
-| KITTI sequence             | FLOAM                      | PFilter                  |KITTI sequence             | FLOAM                      | PFilter   |
-|-----------------|--------|---------------|----|-----------------|--------|---------------|
+| KITTI sequence   | FLOAM     | PFilter   |KITTI sequence   | FLOAM    | PFilter   |
+|--------|--------|--------|--------|--------|--------|
 | `00`                          | 0.7007%                      | 0.6208%                  | `06`                          | 0.5435%                      | 0.4906%                  |
 | `01`                          | 1.9504%                      | 1.8055%                  | `07`                          | 0.4159%                      | 0.3740%                  |
 | `02`                          | 0.9549%                      | 0.8042%                  | `08`                          | 0.9349%                      | 0.9326%                  |
