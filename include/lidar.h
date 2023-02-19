@@ -1,6 +1,4 @@
-// Author of FLOAM: Wang Han 
-// Email wh200720041@gmail.com
-// Homepage https://wanghan.pro
+
 #ifndef _LIDAR_H_
 #define _LIDAR_H_
 

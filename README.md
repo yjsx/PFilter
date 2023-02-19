@@ -24,7 +24,7 @@ accuracy by 9.4% than FLOAM.
 </p>
 
 ## 2. Prerequisites and build
-+ It's the same environment as FLOAM, please see [FLOAM](https://github.com/wh200720041/floam) for the build details.
++ It's similar to FLOAM, please see [FLOAM](https://github.com/wh200720041/floam) for the build details.
 
 ## 3. Usage
 + To test on KITTI dataset and get the same ATEs as the shown in the Sec. 4:
@@ -32,8 +32,8 @@ accuracy by 9.4% than FLOAM.
 + To test on other data:
   + ```roslaunch pfilter pfilter.launch bag_filename:=/YOUR/BAG/PATH k_new:=xx theta_p:=xx theta_max:=xx topic:=xx```
   + The xx should be replaced with suitable value. 
-    + "*k_new* " is Int $\in [0,\infty)$, but [0,5] are recommanded. 
-    + "*theta_p* " is Float $\in [0,\infty)$, but [0,3] are recommanded.
+    + "*k_new* " is Int $\in [0,\infty)$, but [0,5] is recommanded. 
+    + "*theta_p* " is Float $\in [0,\infty)$, but [0,3] is recommanded.
     + "*theta_max* " is Int $\in [0,255]$.
     + "topic" is the ros topic of LIDAR points.
 
